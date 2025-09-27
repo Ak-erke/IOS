@@ -1,0 +1,248 @@
+//: [Previous](@previous)
+
+import Cocoa
+
+
+// Problem1
+for number in 1...100 {
+    if number % 3==0 {
+        print("Fizz")
+    } else if number % 5==0 {
+        print("Buzz")
+    } else if number % 3==0 && number % 5==0 {
+        print("FizzBuzz")
+    }else{
+        print(number)
+    }
+}
+
+// Problem2
+func isPrime(_ number: Int) -> Bool {
+    if number < 2{               // числа меньше 2 не простые
+        return false
+    }
+    for i in 2..<number{                 // перебираем делители от 2 до (number-1)/
+        if number % i == 0{                // если нашли делитель
+            return false                    // число не простое
+        }
+    }
+    return true                          // если не поработал форик значит простое число
+}
+
+for num in 1...100 {
+    if isPrime(num) {
+        print(num)
+    }
+}
+
+
+//Problem3 Tempreture
+
+let value: Double = 36.5
+let unit: String = "C"
+
+func CtoF (_ c: Double) -> Double{
+    return (c * 9/5) + 32
+}
+
+func CtoK (_ c: Double) -> Double{
+    return (c + 273.15)
+}
+
+func FtoC (_ f: Double) -> Double{
+    return (f - 32) * 5/9
+}
+
+func FtoK (_ f: Double) -> Double{
+    return (f - 32) * 5/9 + 273.15
+}
+
+func KtoC (_ k: Double) -> Double{
+    return (k - 273.15)
+}
+
+func KtoF (_ k: Double) -> Double{
+    return (k - 273.15) * 9/5 + 32
+}
+
+
+if unit == "C"{
+    print("\(value)C = \(CtoF(value))F = \(CtoK(value))K")
+} else if unit == "F"{
+    print ("\(value)F = \(FtoC(value))C = \(FtoK(value))K")
+} else if unit == "K"{
+    print ("\(value)K = \(KtoC(value))C = \(KtoF(value))F")
+} else {
+    print("Unknown unit")
+}
+
+//Problem4 shopping list
+
+var shoppingList: [String] = []
+
+shoppingList.append("Milk")
+shoppingList.append("Bread")
+shoppingList.append("Eggs")
+
+print("Our List: \(shoppingList)") //после добавления
+
+
+if let index = shoppingList.firstIndex(of: "Bread"){ //присвоить индекс к продукту
+    shoppingList.remove(at: index)// по этому индексу удалить
+}
+print("Our Current List: \(shoppingList)")// после удаления
+
+
+//Problem5 Frequency--
+let sentence = "hello Hello Akerke is good Akerke is very good"
+
+var lower = sentence.lowercased()        //Переводим всё в нижний регистр
+
+//// Убираем знаки препинания (здесь их нет, но пусть )
+//lower = lower.components(separatedBy: CharacterSet.punctuationCharacters).joined()
+
+
+let words = lower.split(separator: " ")    //Разбиваем строку на слова через пробел
+var frequency: [String: Int] = [:]        // Создаём словарь для подсчёта
+
+for word in words {                        //Считаем частоту слов
+    let w = String(word)
+    if let count = frequency[w] {
+        frequency[w] = count + 1
+    } else {
+        frequency[w] = 1
+    }
+}
+
+for (word, count) in frequency {
+    print("\(word): \(count)")
+}
+
+
+//Problem6 fibonacci
+
+func fibonacci(_ n: Int) -> [Int] {
+    if n <= 0 { return [] }        // для нуля или отрицательных ретернем пустой
+    if n == 1 { return [0] }        // для 1 ретернем 0
+    if n == 2 { return [0, 1] }      // для 2 ретернем 0, 1  на основе их делается другие
+
+    var sequence = [0, 1]
+    for i in 2..<n {
+        let next = sequence[i-1] + sequence[i-2]       // если н это три то 2-1 + 2-2 = 1
+        sequence.append(next)                          //его добавляют в сикуенс в конец 0,1,1
+    }
+    return sequence
+}
+
+// Тесты
+print(fibonacci(0))
+print(fibonacci(1))
+print(fibonacci(2))
+print(fibonacci(3))
+print(fibonacci(10))
+
+
+//Problem7
+let students: [String: Int] = [
+    "Alice": 85,
+    "Bob": 70,
+    "Charlie": 92,
+    "Diana": 60,
+    "Eve": 78,
+    "Akerke": 100
+]
+
+let scores = Array(students.values)
+let average = Double(scores.reduce(0, +)) / Double(scores.count)
+let highest = scores.max() ?? 0
+let lowest = scores.min() ?? 0
+
+for (name, score) in students {
+    if Double(score) > average {
+        print("\(name): \(score)  Above average")
+    } else if Double(score) < average {
+        print("\(name): \(score)  Below average")
+    } else {
+        print("\(name): \(score)  Equal to average")
+    }
+}
+
+print("Average score: \(average)")
+print("Highest score: \(highest)")
+print("Lowest score: \(lowest)")
+
+
+//Problem8
+func isPalindrome(_ text: String) -> Bool{
+    let lowercased = text.lowercased() //A /= a   поэтом делаем их лоуеркейсами
+    let reversed = String(lowercased.reversed())
+    return lowercased == reversed       // сравниваем
+    
+}
+
+print(isPalindrome("Abba"))
+print(isPalindrome("Hello"))
+print(isPalindrome("Absba"))
+
+//Problem9
+
+func add(_ a: Double, _ b: Double) -> Double {
+    a+b
+}
+func subtract(_ a: Double, _ b: Double) -> Double {
+    a-b
+}
+func multiply(_ a: Double, _ b: Double) -> Double {
+    a*b
+}
+func divide(_ a: Double, _ b: Double) -> Double? {
+    if b == 0 {
+        return nil        // деление на ноль ошибка
+    }
+    return a/b
+}
+
+let UserInput: [(Double, Double, String)] = [
+    (10, 5, "+"),
+    (10, 0, "/"),   // проверка деления на ноль
+    (7, 3, "*"),
+    (9, 4, "-"),
+    (5.5, 2.2, "/")
+]
+  
+for (a, b, operation) in UserInput {
+    switch operation {
+    case "+":
+        print(add(a, b))
+    case "-":
+        print(subtract(a, b))
+    case "*":
+        print(multiply(a, b))
+    case "/":
+        if let result = divide(a, b) {
+            print(result)
+        } else {
+            print("Error: Division by zero")
+        }
+    default:
+        print("Unknown operation")
+    }
+}
+
+    
+//Problem10
+func hasUniqueCharacters(_ text: String) -> Bool {
+    var seen: Set<Character> = []            //создаем контейнер для чаров
+    for char in text {
+        if seen.contains(char) {             //проверяем наш чар есть ли он в контейнере
+            return false                     // если да ретернем фолс
+        }
+        seen.insert(char)                     //если нет пихаем в контейнер
+    }
+    return true
+}
+
+// Тесты
+print(hasUniqueCharacters("Swift"))
+print(hasUniqueCharacters("Hello"))   // (две "l")
+print(hasUniqueCharacters("Aa"))      // ("A" ≠ "a")
