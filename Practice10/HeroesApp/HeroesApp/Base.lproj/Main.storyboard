@@ -1,0 +1,200 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="24412" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="24405"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="HeroesApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Y93-hV-m2L" userLabel="heroImage">
+                                <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Get your hero" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tdP-4P-tOE">
+                                <rect key="frame" x="24" y="534" width="345" height="48"/>
+                                <fontDescription key="fontDescription" name="Kailasa-Bold" family="Kailasa" pointSize="37"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <stackView opaque="NO" contentMode="scaleAspectFit" axis="vertical" distribution="fillEqually" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="8Sf-J8-cbN">
+                                <rect key="frame" x="12" y="610" width="369" height="80"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleAspectFit" distribution="fillProportionally" translatesAutoresizingMaskIntoConstraints="NO" id="hzC-0B-aFm">
+                                        <rect key="frame" x="0.0" y="0.0" width="369" height="32.666666666666664"/>
+                                        <subviews>
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="scalemass.fill" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="aVQ-5T-MTE">
+                                                <rect key="frame" x="0.0" y="0.33333333333333215" width="44.666666666666664" height="31.999999999999996"/>
+                                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            </imageView>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="??" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cxf-H8-PQ1">
+                                                <rect key="frame" x="44.666666666666657" y="0.0" width="50.333333333333343" height="32.666666666666664"/>
+                                                <fontDescription key="fontDescription" name="Impact" family="Impact" pointSize="22"/>
+                                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="figure.run" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="hz7-X6-cid">
+                                                <rect key="frame" x="95" y="0.0" width="39.666666666666657" height="32.666666666666664"/>
+                                                <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                            </imageView>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="??" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="axn-3T-pyf">
+                                                <rect key="frame" x="134.66666666666666" y="0.0" width="50.333333333333343" height="32.666666666666664"/>
+                                                <fontDescription key="fontDescription" name="Impact" family="Impact" pointSize="22"/>
+                                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="timer" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="jgg-2Y-w6c">
+                                                <rect key="frame" x="185" y="0.66666666666666607" width="42.333333333333343" height="31.333333333333336"/>
+                                                <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                            </imageView>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="??" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TcP-9h-CSG">
+                                                <rect key="frame" x="227.33333333333334" y="0.0" width="50.333333333333343" height="32.666666666666664"/>
+                                                <fontDescription key="fontDescription" name="Impact" family="Impact" pointSize="22"/>
+                                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="lines.measurement.vertical" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="TfS-m2-cC1">
+                                                <rect key="frame" x="277.66666666666669" y="0.66666666666666785" width="41" height="31.666666666666661"/>
+                                                <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                            </imageView>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="??" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iPq-D9-akP">
+                                                <rect key="frame" x="318.66666666666669" y="0.0" width="50.333333333333314" height="32.666666666666664"/>
+                                                <fontDescription key="fontDescription" name="Impact" family="Impact" pointSize="22"/>
+                                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="qt0-b0-ErM">
+                                        <rect key="frame" x="0.0" y="47.666666666666629" width="369" height="32.333333333333343"/>
+                                        <subviews>
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="bolt.fill" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="WFK-GH-aLh">
+                                                <rect key="frame" x="0.0" y="-0.33333333333333215" width="46" height="33.333333333333329"/>
+                                                <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                            </imageView>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="??" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Qys-Ib-K0b">
+                                                <rect key="frame" x="46" y="0.0" width="46.333333333333343" height="32.333333333333336"/>
+                                                <fontDescription key="fontDescription" name="Impact" family="Impact" pointSize="22"/>
+                                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="figure.boxing" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="emQ-5r-1es">
+                                                <rect key="frame" x="92.333333333333329" y="-1" width="45.999999999999986" height="34.333333333333336"/>
+                                                <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                            </imageView>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="??" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mBv-ne-v95">
+                                                <rect key="frame" x="138.33333333333334" y="0.0" width="46.333333333333343" height="32.333333333333336"/>
+                                                <fontDescription key="fontDescription" name="Impact" family="Impact" pointSize="22"/>
+                                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="apple.intelligence" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="eaa-ec-QpE">
+                                                <rect key="frame" x="184.66666666666666" y="-0.3333333333333357" width="46" height="32.666666666666671"/>
+                                                <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                            </imageView>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="??" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OqR-Fm-tuN">
+                                                <rect key="frame" x="230.66666666666666" y="0.0" width="45.999999999999972" height="32.333333333333336"/>
+                                                <fontDescription key="fontDescription" name="Impact" family="Impact" pointSize="22"/>
+                                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="figure.strengthtraining.traditional" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="qaX-Wf-UD1">
+                                                <rect key="frame" x="276.66666666666669" y="-1" width="46.333333333333314" height="34.333333333333336"/>
+                                                <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                            </imageView>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="??" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eow-ux-6UY">
+                                                <rect key="frame" x="323" y="0.0" width="46" height="32.333333333333336"/>
+                                                <fontDescription key="fontDescription" name="Impact" family="Impact" pointSize="22"/>
+                                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                    </stackView>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="80" id="GAv-og-HVM"/>
+                                </constraints>
+                            </stackView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oNf-im-IEq">
+                                <rect key="frame" x="32" y="714" width="329" height="46"/>
+                                <fontDescription key="fontDescription" name="Kailasa" family="Kailasa" pointSize="26"/>
+                                <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                <state key="normal" title="Roll!">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <color key="titleShadowColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <state key="selected">
+                                    <color key="titleColor" red="0.75246746779999996" green="0.75246746779999996" blue="0.75246746779999996" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                </state>
+                                <connections>
+                                    <action selector="rollButtonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="85E-ei-CCb"/>
+                                </connections>
+                            </button>
+                            <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" style="whiteLarge" translatesAutoresizingMaskIntoConstraints="NO" id="5st-zO-O6Y">
+                                <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                            </activityIndicatorView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="viewFlipsideBackgroundColor"/>
+                        <constraints>
+                            <constraint firstAttribute="bottom" secondItem="5st-zO-O6Y" secondAttribute="bottom" id="0aX-RZ-ooB"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="oNf-im-IEq" secondAttribute="bottom" constant="24" id="7cf-2x-cNN"/>
+                            <constraint firstAttribute="bottom" secondItem="Y93-hV-m2L" secondAttribute="bottom" id="AfA-rS-biH"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="8Sf-J8-cbN" secondAttribute="trailing" constant="12" id="GUC-cg-a9S"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="oNf-im-IEq" secondAttribute="trailing" constant="32" id="KXj-Zk-vbl"/>
+                            <constraint firstItem="Y93-hV-m2L" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="St5-sV-3DF"/>
+                            <constraint firstItem="8Sf-J8-cbN" firstAttribute="top" secondItem="tdP-4P-tOE" secondAttribute="bottom" constant="28" id="TMq-f2-qqQ"/>
+                            <constraint firstItem="5st-zO-O6Y" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="XaL-ZB-hZm"/>
+                            <constraint firstItem="oNf-im-IEq" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="32" id="bMH-Nt-i6I"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="tdP-4P-tOE" secondAttribute="trailing" constant="24" id="gg0-4L-dk8"/>
+                            <constraint firstItem="tdP-4P-tOE" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="24" id="qVP-xV-Tua"/>
+                            <constraint firstItem="8Sf-J8-cbN" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="12" id="qes-z5-aVz"/>
+                            <constraint firstItem="oNf-im-IEq" firstAttribute="top" secondItem="8Sf-J8-cbN" secondAttribute="bottom" constant="24" id="rgu-IK-iIb"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="5st-zO-O6Y" secondAttribute="trailing" id="ucz-zK-WyN"/>
+                            <constraint firstItem="Y93-hV-m2L" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="vhO-CO-ciw"/>
+                            <constraint firstItem="5st-zO-O6Y" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="wfW-8Q-eux"/>
+                            <constraint firstItem="Y93-hV-m2L" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="xfM-qb-Y2w"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="activityIndicator" destination="5st-zO-O6Y" id="HME-2m-zuo"/>
+                        <outlet property="combatLabel" destination="mBv-ne-v95" id="FL4-rE-8DG"/>
+                        <outlet property="durabilityLabel" destination="TcP-9h-CSG" id="wvS-U3-I79"/>
+                        <outlet property="heightLabel" destination="iPq-D9-akP" id="64l-4g-vnT"/>
+                        <outlet property="heroImage" destination="Y93-hV-m2L" id="iDc-Jz-z0y"/>
+                        <outlet property="heroName" destination="tdP-4P-tOE" id="R9K-UD-5ow"/>
+                        <outlet property="intelligenceLabel" destination="OqR-Fm-tuN" id="rYN-M1-pn0"/>
+                        <outlet property="powerLabel" destination="Qys-Ib-K0b" id="Lxb-oa-p1J"/>
+                        <outlet property="randomButton" destination="oNf-im-IEq" id="dBo-GG-J1N"/>
+                        <outlet property="speedLabel" destination="axn-3T-pyf" id="WgC-KE-zmX"/>
+                        <outlet property="strengthLabel" destination="eow-ux-6UY" id="S2z-Zn-fQs"/>
+                        <outlet property="weightLabel" destination="cxf-H8-PQ1" id="eI9-Kv-tlw"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="46.564885496183201" y="-2.1126760563380285"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="apple.intelligence" catalog="system" width="128" height="118"/>
+        <image name="bolt.fill" catalog="system" width="100" height="128"/>
+        <image name="figure.boxing" catalog="system" width="118" height="128"/>
+        <image name="figure.run" catalog="system" width="115" height="128"/>
+        <image name="figure.strengthtraining.traditional" catalog="system" width="128" height="119"/>
+        <image name="lines.measurement.vertical" catalog="system" width="125" height="128"/>
+        <image name="scalemass.fill" catalog="system" width="128" height="121"/>
+        <image name="timer" catalog="system" width="128" height="123"/>
+        <systemColor name="viewFlipsideBackgroundColor">
+            <color red="0.12156862745098039" green="0.12941176470588237" blue="0.14117647058823529" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
+</document>
